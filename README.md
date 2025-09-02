@@ -1,2 +1,2 @@
 # Group-Project
-repository for the 4-Bit Coders. 
+repository for the 4-Bit Squad. 
