@@ -1,2 +1,2 @@
-# Group-Project-
-repository for the three codeeteers. 
+# Group-Project
+repository for the 4-Bit Coders. 
