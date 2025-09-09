@@ -9,27 +9,31 @@
   <title>Apply Here</title>
   <link rel="stylesheet" href="/styles/project.css" type="text/css">
 </head>
-<header>
-  <!--main heading just for now so i could link the other html pages-->
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/pages/jobs">Available Jobs</a>
-      </li>
-      <li>
-        <a href="/pages/apply">Application form</a>
-      </li>
-      <li>
-        <a href="/pages/about">About page</a>
-      </li>
-    </ul>
-  </nav>
-</header>
 
 <body>
+  <header>
+    <!--main heading just for now so i could link the other html pages-->
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/pages/jobs">Available Jobs</a>
+        </li>
+        <li>
+          <a href="/pages/apply">Application form</a>
+        </li>
+        <li>
+          <a href="/pages/about">About page</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
   <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
     <fieldset>
       <Legend>Applicant Information</Legend>
@@ -76,7 +80,6 @@
           pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}"
           required>
       </p>
-      <p>
       <fieldset>
         <!-- For fields with multiple options such as radio and checkmark name is used to link the options together. -->
         <legend>Gender</legend>
@@ -112,9 +115,8 @@
           id="other"
           value="other"
           required>
-
       </fieldset>
-      </p>
+
 
       <p>
         <!-- Pattern allows up to 40 of any characters is also used in town/suburb-->
@@ -179,49 +181,49 @@
           pattern="[0-9]{8,12}"
           required>
       </p>
-      <p>
-        <label for="skill-list">Skill List:</label>
+      <fieldset>
+        <legend>Skill List</legend>
         <!-- Temporary Skill Names until job positions are discussed as a group -->
         <!-- Due to each of these needing to be able to display seperately each skill is given a unique name so that it appears in the submission as an additional result this means that these checkboxes do not need to have a value-->
-        <label for="skil1">Skill 1</label>
+        <label for="skill1">Skill 1</label>
         <input
           type="checkbox"
           name="skill1"
           id="skill1">
 
-        <label for="skil1">Skill 2</label>
+        <label for="skill2">Skill 2</label>
         <input
           type="checkbox"
           name="skill2"
           id="skill2">
 
-        <label for="skil1">Skill 3</label>
+        <label for="skill3">Skill 3</label>
         <input
           type="checkbox"
           name="skill3"
           id="skill3">
 
-        <label for="skil1">Skill 4</label>
+        <label for="skill4">Skill 4</label>
         <input
           type="checkbox"
           name="skill4"
           id="skill4">
 
-        <label for="skil1">Skill 5</label>
+        <label for="skill5">Skill 5</label>
         <input
           type="checkbox"
           name="skill5"
           id="skill5">
 
-        <label for="skil1">Other Skills</label>
+        <label for="other-skills">Other Skills</label>
         <input
           type="checkbox"
           name="other-skills"
           id="other-skills">
-      </p>
+      </fieldset>
       <p>
-        <label for="other-skills">Other Skills</label>
-        <textarea name="" id="other-skills"></textarea>
+        <label for="other-skills-long">Other Skills</label>
+        <textarea name="other-skills" id="other-skills-long"></textarea>
       </p>
     </fieldset>
     <input type="submit" value="Submit" />
