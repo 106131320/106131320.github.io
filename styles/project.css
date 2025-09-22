@@ -19,7 +19,7 @@ body {
   background: #eef2f7;
   color: #333;
   line-height: 1.6;
-  max-width: 960px;
+  max-width: 960px; /* --- i think it should be max width, feels weird to view a website but its sized to be on a phone --- */
   margin: 20px auto;
   padding: 15px;
 }
@@ -314,4 +314,107 @@ input[type="reset"]:hover {
   form input[type="reset"] {
     width: 100%;
   }
+}
+
+/* homepage Styling */
+
+
+#home, h1 {
+  text-align: center;
+  width: 100%;
+  flex: ;
+}
+
+#home, #home_image, #happy_students
+{
+  width: 100%;
+  text-align: center;
+  object-fit: fill;  
+}
+
+.centered_top {   /* centers text, want to change color to something more readable*/
+
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 39px;
+  font-weight: bold;
+}
+
+.centered_bottom {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#home, #home_image, figcaption {
+    color: #ffffff;;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 1s;
+}
+
+#home, #home_image, figcaption:hover{
+    color: #000000; /* reveals the reference for the pic */
+}
+
+#home, #home_image, figcaption a {
+    color: #ffffff;;
+    text-decoration: none;  /* i might just be really tired but i cant get them to fade together :p */
+    font-weight: normal;
+    transition: color 1s;
+}
+
+#home, #home_image, figcaption a:hover {
+    color: #000000; /* reveals the reference for the pic */
+}
+
+#home, h3{
+  text-align: center;
+  color: #004b99;
+  font-weight: bold;
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #004b99; /* plain background - eventually want to change */
+    color: white; /* White text */
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 15px;
+}
+
+#footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#footer nav ul li {
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+#footer nav ul li a {
+    color: #ffffff;;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s;
+}
+
+#footer nav ul li a:hover {
+    color: #cabebe; /* temp grey on hover */
 }
