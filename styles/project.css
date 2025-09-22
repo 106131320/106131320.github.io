@@ -22,11 +22,19 @@ description: links to all html files
       padding: 15px;
     }
 
+
+    img.icon {
+    filter: invert();
+    margin: 0 0 0 0;
+    border: none;
+
+    }
+
     nav {
       background-color: #004b99;
       border-radius: 6px;
       margin-bottom: 30px;
-      padding: 12px 20px;
+      padding: 6px 20px 0px 0px;
       box-shadow: 0 3px 6px rgba(0, 75, 153, 0.3);
     }
 
@@ -56,9 +64,9 @@ description: links to all html files
       margin-bottom: 40px;
     }
 
-    header img {
+    #logo {
       max-width: 120px;
-      margin-bottom: 15px;
+      margin:0 0 0 0;
       border-radius: 50%;
       border: 3px solid #004b99;
     }
@@ -73,8 +81,7 @@ description: links to all html files
       font-size: 1.1rem;
       color: #555;
     }
-
-    section.job-posting {
+    section {
       background: white;
       border-radius: 10px;
       padding: 25px 30px;

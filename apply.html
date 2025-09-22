@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <img src="Company logo/4-Bit Squad Logo.png" alt="Company Logo">
+    <img id="logo" src="images/logo.png" alt="Company Logo">
     <h1>The Charity</h1>
     <p>Build your future with us.</p>
 
@@ -22,9 +22,19 @@
         <li><a href="/jobs">Available Jobs</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/apply">Application Form</a></li>
-        <li><a href="https://github.com/106131320/106131320.github.io" target="_blank">GitHub</a></li>
-        <li><a href="https://jira.companyname.com" target="_blank">Jira</a></li>
-        <li><a href="mailto:info@companyname.com">Contact Us</a></li>
+        <li>
+          <a href="https://github.com/106131320/106131320.github.io" target="_blank">
+            <img class="icon" src="images/github.svg" alt="Github" width="56em">
+          </a>
+        </li>
+        <li>
+          <a href="https://jira.companyname.com" target="_blank">
+            <img class="icon" src="images/jira.svg" alt="Jira" width="56em">
+          </a>
+        </li>
+        <li><a href="mailto:info@companyname.com">
+            <img class="icon" src="images/email.svg" alt="Contact Us" width="56em">
+          </a></li>
       </ul>
     </nav>
   </header>
@@ -32,200 +42,203 @@
 
 
 
-  <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
-    <fieldset>
-      <Legend>Applicant Information</Legend>
-      <!-- Use of <p> is done to create formatting prior to css, likely will be removed when CSS is done -->
-      <p>
-        <!-- kebab-case is used for id's to clearly seperate them from text -->
-        <label for="reference-number">Reference Number</label>
-        <!-- Pattern checks for exactly 5 characters allowing only alphanumeric ones -->
-        <input
-          type="text"
-          name="reference-number"
-          id="reference-number"
-          pattern="[a-zA-Z0-9]{5}"
-          required>
-      </p>
-
-      <p>
-        <label for="first-name">First Name</label>
-        <!-- Pattern used for both first name and last name allows for any alphabetical character and limits the amount to a minimum of 1 and maximum of 20 characters -->
-        <input
-          type="text"
-          name="first-name"
-          id="first-name"
-          pattern="[a-zA-Z]{1,20}"
-          required>
-
-      </p>
-      <p>
-        <label for="last-name">Last Name</label>
-        <input
-          type="text"
-          name="last-name"
-          id="last-name"
-          pattern="[a-zA-Z]{1,20}"
-          required>
-      </p>
-      <p>
-        <label for="date-of-birth">Date of Birth</label>
-        <!-- Pattern here forces DD/MM/YYYY -->
-        <input
-          type="text"
-          name="date-of-birth"
-          id="date-of-birth"
-          pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}"
-          required>
-      </p>
+  <section>
+    <h2>Application Form</h2>
+    <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
       <fieldset>
-        <!-- For fields with multiple options such as radio and checkmark name is used to link the options together. -->
-        <legend>Gender</legend>
-        <label for="male">Male</label>
-        <!-- Value is used as otherwise it simply displays on in formtest -->
-        <input
-          type="radio"
-          name="gender"
-          id="male"
-          value="male"
-          required>
+        <Legend>Applicant Information</Legend>
+        <!-- Use of <p> is done to create formatting prior to css, likely will be removed when CSS is done -->
+        <p>
+          <!-- kebab-case is used for id's to clearly seperate them from text -->
+          <label for="reference-number">Reference Number</label>
+          <!-- Pattern checks for exactly 5 characters allowing only alphanumeric ones -->
+          <input
+            type="text"
+            name="reference-number"
+            id="reference-number"
+            pattern="[a-zA-Z0-9]{5}"
+            required>
+        </p>
 
-        <label for="female">Female</label>
-        <input
-          type="radio"
-          name="gender"
-          id="female"
-          value="female"
-          required>
+        <p>
+          <label for="first-name">First Name</label>
+          <!-- Pattern used for both first name and last name allows for any alphabetical character and limits the amount to a minimum of 1 and maximum of 20 characters -->
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            pattern="[a-zA-Z]{1,20}"
+            required>
 
-        <label for="non-binary">Non-Binary</label>
-        <input
-          type="radio"
-          name="gender"
-          id="non-binary"
-          value="non-binary"
-          required>
+        </p>
+        <p>
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            pattern="[a-zA-Z]{1,20}"
+            required>
+        </p>
+        <p>
+          <label for="date-of-birth">Date of Birth</label>
+          <!-- Pattern here forces DD/MM/YYYY -->
+          <input
+            type="text"
+            name="date-of-birth"
+            id="date-of-birth"
+            pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}"
+            required>
+        </p>
+        <fieldset>
+          <!-- For fields with multiple options such as radio and checkmark name is used to link the options together. -->
+          <legend>Gender</legend>
+          <label for="male">Male</label>
+          <!-- Value is used as otherwise it simply displays on in formtest -->
+          <input
+            type="radio"
+            name="gender"
+            id="male"
+            value="male"
+            required>
 
-        <label for="other">Other</label>
-        <input
-          type="radio"
-          name="gender"
-          id="other"
-          value="other"
-          required>
+          <label for="female">Female</label>
+          <input
+            type="radio"
+            name="gender"
+            id="female"
+            value="female"
+            required>
+
+          <label for="non-binary">Non-Binary</label>
+          <input
+            type="radio"
+            name="gender"
+            id="non-binary"
+            value="non-binary"
+            required>
+
+          <label for="other">Other</label>
+          <input
+            type="radio"
+            name="gender"
+            id="other"
+            value="other"
+            required>
+        </fieldset>
+
+
+        <p>
+          <!-- Pattern allows up to 40 of any characters is also used in town/suburb-->
+          <label for="street-address">Street Address</label>
+          <input
+            type="text"
+            name="street-address"
+            id="street-address"
+            pattern=".{1,40}"
+            required>
+        </p>
+        <p>
+          <label for="town">Town/Suburb</label>
+          <input
+            type="text"
+            name="town"
+            id="town"
+            pattern=".{1,40}"
+            required>
+        </p>
+        <p>
+          <label for="state">State</label>
+          <select name="state" id="state" required>
+            <!-- Blank value for initial option forces another to be selected -->
+            <option value="">Please Select a state</option>
+            <option value="VIC">VIC</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">QLD</option>
+            <option value="NT">NT</option>
+            <option value="WA">WA</option>
+            <option value="SA">SA</option>
+            <option value="TAS">TAS</option>
+            <option value="ACT">ACT</option>
+          </select>
+        </p>
+        <p>
+          <!-- Pattern requires exactly 4 numerical characters -->
+          <label for="postcode">Postcode</label>
+          <input
+            type="text"
+            name="postcode"
+            id="postcode"
+            pattern="[0-9]{4}"
+            required>
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <!-- Email type forces email conventions without the need for a pattern -->
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required>
+        </p>
+        <p>
+          <label for="phone-number">Phone Number</label>
+          <!-- Requirements for phone number asks for 8-12 numerical characters despite that not being how a phone number works, either way I have implemented that here -->
+          <input
+            type="text"
+            name="phone-number"
+            id="phone-number"
+            pattern="[0-9]{8,12}"
+            required>
+        </p>
+        <fieldset>
+          <legend>Skill List</legend>
+          <!-- Temporary Skill Names until job positions are discussed as a group -->
+          <!-- Due to each of these needing to be able to display seperately each skill is given a unique name so that it appears in the submission as an additional result this means that these checkboxes do not need to have a value-->
+          <label for="skill1">Skill 1</label>
+          <input
+            type="checkbox"
+            name="skill1"
+            id="skill1">
+
+          <label for="skill2">Skill 2</label>
+          <input
+            type="checkbox"
+            name="skill2"
+            id="skill2">
+
+          <label for="skill3">Skill 3</label>
+          <input
+            type="checkbox"
+            name="skill3"
+            id="skill3">
+
+          <label for="skill4">Skill 4</label>
+          <input
+            type="checkbox"
+            name="skill4"
+            id="skill4">
+
+          <label for="skill5">Skill 5</label>
+          <input
+            type="checkbox"
+            name="skill5"
+            id="skill5">
+
+          <label for="other-skills">Other Skills</label>
+          <input
+            type="checkbox"
+            name="other-skills"
+            id="other-skills">
+        </fieldset>
+        <p>
+          <!-- NOT YET IMPLEMENTED: other-skills-long should only appear as an option when other-skills is checked. -->
+          <label for="other-skills-long">Other Skills</label>
+          <textarea name="other-skills-long" id="other-skills-long"></textarea>
+        </p>
       </fieldset>
-
-
-      <p>
-        <!-- Pattern allows up to 40 of any characters is also used in town/suburb-->
-        <label for="street-address">Street Address</label>
-        <input
-          type="text"
-          name="street-address"
-          id="street-address"
-          pattern=".{1,40}"
-          required>
-      </p>
-      <p>
-        <label for="town">Town/Suburb</label>
-        <input
-          type="text"
-          name="town"
-          id="town"
-          pattern=".{1,40}"
-          required>
-      </p>
-      <p>
-        <label for="state">State</label>
-        <select name="state" id="state" required>
-          <!-- Blank value for initial option forces another to be selected -->
-          <option value="">Please Select a state</option>
-          <option value="VIC">VIC</option>
-          <option value="NSW">NSW</option>
-          <option value="QLD">QLD</option>
-          <option value="NT">NT</option>
-          <option value="WA">WA</option>
-          <option value="SA">SA</option>
-          <option value="TAS">TAS</option>
-          <option value="ACT">ACT</option>
-        </select>
-      </p>
-      <p>
-        <!-- Pattern requires exactly 4 numerical characters -->
-        <label for="postcode">Postcode</label>
-        <input
-          type="text"
-          name="postcode"
-          id="postcode"
-          pattern="[0-9]{4}"
-          required>
-      </p>
-      <p>
-        <label for="email">Email</label>
-        <!-- Email type forces email conventions without the need for a pattern -->
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required>
-      </p>
-      <p>
-        <label for="phone-number">Phone Number</label>
-        <!-- Requirements for phone number asks for 8-12 numerical characters despite that not being how a phone number works, either way I have implemented that here -->
-        <input
-          type="text"
-          name="phone-number"
-          id="phone-number"
-          pattern="[0-9]{8,12}"
-          required>
-      </p>
-      <fieldset>
-        <legend>Skill List</legend>
-        <!-- Temporary Skill Names until job positions are discussed as a group -->
-        <!-- Due to each of these needing to be able to display seperately each skill is given a unique name so that it appears in the submission as an additional result this means that these checkboxes do not need to have a value-->
-        <label for="skill1">Skill 1</label>
-        <input
-          type="checkbox"
-          name="skill1"
-          id="skill1">
-
-        <label for="skill2">Skill 2</label>
-        <input
-          type="checkbox"
-          name="skill2"
-          id="skill2">
-
-        <label for="skill3">Skill 3</label>
-        <input
-          type="checkbox"
-          name="skill3"
-          id="skill3">
-
-        <label for="skill4">Skill 4</label>
-        <input
-          type="checkbox"
-          name="skill4"
-          id="skill4">
-
-        <label for="skill5">Skill 5</label>
-        <input
-          type="checkbox"
-          name="skill5"
-          id="skill5">
-
-        <label for="other-skills">Other Skills</label>
-        <input
-          type="checkbox"
-          name="other-skills"
-          id="other-skills">
-      </fieldset>
-      <p>
-        <!-- NOT YET IMPLEMENTED: other-skills-long should only appear as an option when other-skills is checked. -->
-        <label for="other-skills-long">Other Skills</label>
-        <textarea name="other-skills-long" id="other-skills-long"></textarea>
-      </p>
-    </fieldset>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset form">
-  </form>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset form">
+    </form>
+  </section>
 </body>
