@@ -153,6 +153,14 @@ description: links to all html files
       margin-bottom: 12px;
     }
 
+    #hidden{
+      display: none;
+    }
+
+    #other-skills:checked + #hidden {
+      display: block;
+    }
+
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
