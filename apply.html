@@ -57,6 +57,7 @@
             name="reference-number"
             id="reference-number"
             pattern="[a-zA-Z0-9]{5}"
+            placeholder="12345"
             required>
         </p>
 
@@ -68,6 +69,7 @@
             name="first-name"
             id="first-name"
             pattern="[a-zA-Z]{1,20}"
+            placeholder="John"
             required>
 
         </p>
@@ -78,6 +80,7 @@
             name="last-name"
             id="last-name"
             pattern="[a-zA-Z]{1,20}"
+            placeholder="Smith"
             required>
         </p>
         <p>
@@ -88,6 +91,7 @@
             name="date-of-birth"
             id="date-of-birth"
             pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}"
+            placeholder="DD/MM/YYYY"
             required>
         </p>
         <fieldset>
@@ -136,6 +140,7 @@
             name="street-address"
             id="street-address"
             pattern=".{1,40}"
+            placeholder="123 Example Road"
             required>
         </p>
         <p>
@@ -145,6 +150,7 @@
             name="town"
             id="town"
             pattern=".{1,40}"
+            placeholder="Example"
             required>
         </p>
         <p>
@@ -170,6 +176,7 @@
             name="postcode"
             id="postcode"
             pattern="[0-9]{4}"
+            placeholder="1234"
             required>
         </p>
         <p>
@@ -179,6 +186,7 @@
             type="email"
             name="email"
             id="email"
+            placeholder="email@email.com"
             required>
         </p>
         <p>
@@ -189,6 +197,7 @@
             name="phone-number"
             id="phone-number"
             pattern="[0-9]{8,12}"
+            placeholder="0412 345 678"
             required>
         </p>
         <fieldset>
@@ -232,7 +241,8 @@
             id="other-skills">
           <div id="hidden">
             <label for="other-skills-long">Other Skills</label>
-            <textarea name="other-skills-long" id="other-skills-long"></textarea>
+            <textarea name="other-skills-long" id="other-skills-long"
+              placeholder="Type your other skills here"></textarea>
           </div>
         </fieldset>
 
