@@ -19,7 +19,8 @@ body {
   background: #eef2f7;
   color: #333;
   line-height: 1.6;
-  max-width: 960px; /* --- i think it should be max width, feels weird to view a website but its sized to be on a phone --- */
+  max-width: 960px;
+  /* --- i think it should be max width, feels weird to view a website but its sized to be on a phone --- */
   margin: 20px auto;
   padding: 15px;
 }
@@ -319,20 +320,24 @@ input[type="reset"]:hover {
 /* homepage Styling */
 
 
-#home, h1 {
+#home,
+h1 {
   text-align: center;
   width: 100%;
-  flex: ;
+  /* This line didn't actually do anything so I've just commented it out temporarily */
+  /* flex: ; */
 }
 
-#home, #home_image, #happy_students
-{
+#home,
+#home_image,
+#happy_students {
   width: 100%;
   text-align: center;
-  object-fit: fill;  
+  object-fit: fill;
 }
 
-.centered_top {   /* centers text, want to change color to something more readable*/
+.centered_top {
+  /* centers text, want to change color to something more readable*/
 
   position: absolute;
   top: 75%;
@@ -353,29 +358,30 @@ input[type="reset"]:hover {
   font-weight: bold;
 }
 
-#home, #home_image, figcaption {
-    color: #ffffff;;
-    text-decoration: none;
-    font-weight: normal;
-    transition: color 1s;
+
+#revealed a {
+  /* This allows for the entire div to be hidden at once extracting this color. */
+  color: #000000;
 }
 
-#home, #home_image, figcaption:hover{
-    color: #000000; /* reveals the reference for the pic */
+#revealed {
+  opacity: 0;
+  /* Fixed the fading by using opacity instead of color and defining the link color in it's own section */
+  text-decoration: none;
+  font-weight: normal;
+  transition: opacity 1s;
 }
 
-#home, #home_image, figcaption a {
-    color: #ffffff;;
-    text-decoration: none;  /* i might just be really tired but i cant get them to fade together :p */
-    font-weight: normal;
-    transition: color 1s;
+
+#revealed:hover {
+  /* reveals the reference for the pic */
+  opacity: 100;
+
 }
 
-#home, #home_image, figcaption a:hover {
-    color: #000000; /* reveals the reference for the pic */
-}
 
-#home, h3{
+#home,
+h3 {
   text-align: center;
   color: #004b99;
   font-weight: bold;
@@ -383,38 +389,42 @@ input[type="reset"]:hover {
 
 /* Footer Styling */
 #footer {
-    background-color: #004b99; /* plain background - eventually want to change */
-    color: white; /* White text */
-    padding: 20px 10px;
-    text-align: center;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  background-color: #004b99;
+  /* plain background - eventually want to change */
+  color: white;
+  /* White text */
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 #footer p {
-    margin: 0;
-    font-size: 15px;
+  margin: 0;
+  font-size: 15px;
 }
 
 #footer nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 #footer nav ul li {
-    margin: 0 10px;
-    font-size: 15px;
+  margin: 0 10px;
+  font-size: 15px;
 }
 
 #footer nav ul li a {
-    color: #ffffff;;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.4s;
+  color: #ffffff;
+  ;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.4s;
 }
 
 #footer nav ul li a:hover {
-    color: #cabebe; /* temp grey on hover */
+  color: #cabebe;
+  /* temp grey on hover */
 }
