@@ -235,20 +235,13 @@ select {
 /* Gender Fieldset specific styling */
 .gender-fieldset {
   flex-direction: row;
-  /* Arrange gender options horizontally */
   flex-wrap: wrap;
-  /* Allow options to wrap to the next line on smaller screens */
   gap: 20px;
-  /* Space between individual radio button groups */
   border: 1px solid #ccc;
-  /* Lighter border for nested fieldset */
   background-color: #f0f4f7;
-  /* Slightly different background */
   padding: 15px;
   margin-top: 5px;
-  /* Adjust spacing from previous input */
   margin-bottom: 5px;
-  /* Adjust spacing to next input */
 }
 
 .gender-fieldset legend {
@@ -263,11 +256,8 @@ select {
 .gender-fieldset label {
   display: flex;
   align-items: center;
-  /* Vertically align radio button and text */
   font-weight: normal;
-  /* Reset font weight if inherited */
   margin-bottom: 0;
-  /* Override any previous label margins */
   cursor: pointer;
 }
 
@@ -288,7 +278,6 @@ form textarea {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* margin-bottom: 12px; Handled by parent fieldset gap */
 }
 
 .skill-group-standard label {
@@ -305,48 +294,56 @@ form textarea {
   flex-shrink: 0;
 }
 
-/* Styling for the 'Other Skills' control group */
 .other-skills-control {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  /* margin-top: 12px; Handled by parent fieldset gap */
+  gap: 10px;
+  margin-top: 12px;
 }
 
 /* Style the label for other-skills specifically */
 .other-skills-control label[for="other-skills"] {
-  display: inline-flex;
-  align-items: center;
+  font-weight: 500;
+  color: #333;
   cursor: pointer;
   margin-bottom: 0;
-  margin-right: 10px;
+
 }
 
 .other-skills-control input[type="checkbox"] {
-  margin-right: 10px;
+  margin-right: -5px;
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
 
-/* Hide the #hidden div by default */
 #hidden {
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease-out,
+    opacity 0.5s ease-out,
+    padding 0.5s ease-out;
+  padding: 0;
   width: 100%;
-  margin-top: 10px;
 }
 
 .other-skills-control input#other-skills:checked~#hidden {
-  display: block;
+  max-height: 200px;
+  opacity: 1;
+  padding: 10px;
 }
 
-/* Additional style for the textarea within #hidden */
 #hidden label {
   margin-bottom: 8px;
+  display: block;
 }
 
 #hidden textarea {
   width: 100%;
+  margin-top: 0;
 }
 
 /* Submit and Reset Buttons */
@@ -485,24 +482,24 @@ h3 {
 
 
 @media (max-width: 600px) {
-    nav ul {
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-    }
-
-    form label {
-      width: 100%;
-    }
-
-    form input[type="submit"],
-    form input[type="reset"] {
-      width: 100%;
-    }
-
-    fieldset>input[type="text"],
-    fieldset>input[type="email"],
-    fieldset>select.selectable {
-      width: 100%;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
+
+  form label {
+    width: 100%;
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    width: 100%;
+  }
+
+  fieldset>input[type="text"],
+  fieldset>input[type="email"],
+  fieldset>select.selectable {
+    width: 100%;
+  }
+}
