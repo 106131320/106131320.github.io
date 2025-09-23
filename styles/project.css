@@ -7,6 +7,11 @@ description: links to all html files
 
 */
 
+/* --- Variable Declaration --- */
+:root {
+  --main-blue: #004b99;
+}
+
 /* --- Base Styles --- */
 * {
   box-sizing: border-box;
@@ -39,21 +44,19 @@ ol li {
 /* --- Image Styles --- */
 img.icon {
   filter: invert();
-  margin: 0 0 0 0;
   border: none;
   width: 56px;
 }
 
 #logo {
   max-width: 120px;
-  margin: 0 0 0 0;
   border-radius: 50%;
-  border: 3px solid #004b99;
+  border: 3px solid var(--main-blue);
 }
 
 /* --- Navigation --- */
 nav {
-  background-color: #004b99;
+  background-color: var(--main-blue);
   border-radius: 6px;
   margin-bottom: 30px;
   padding: 6px 20px 0px 0px;
@@ -89,7 +92,7 @@ header {
 
 header h1 {
   font-size: 2.4rem;
-  color: #004b99;
+  color: var(--main-blue);
   margin-bottom: 8px;
 }
 
@@ -105,11 +108,11 @@ section {
   padding: 25px 30px;
   box-shadow: 0 4px 15px rgba(0, 75, 153, 0.15);
   margin-bottom: 40px;
-  border-left: 6px solid #004b99;
+  border-left: 6px solid var(--main-blue);
 }
 
 section.job-posting h2 {
-  color: #004b99;
+  color: var(--main-blue);
   margin-bottom: 10px;
   font-size: 1.7rem;
 }
@@ -144,7 +147,7 @@ table {
 table,
 th,
 td {
-  border: 1.5px solid #004b99;
+  border: 1.5px solid var(--main-blue);
 }
 
 th,
@@ -156,7 +159,7 @@ td {
 /* --- Aside --- */
 aside {
   background-color: #cce0ff;
-  border-left: 6px solid #004b99;
+  border-left: 6px solid var(--main-blue);
   padding: 20px 25px;
   margin: 40px 0;
   border-radius: 8px;
@@ -176,7 +179,7 @@ form {
 }
 
 fieldset {
-  border: 1px solid #004b99;
+  border: 1px solid var(--main-blue);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -186,7 +189,7 @@ fieldset {
 legend {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #004b99;
+  color: var(--main-blue);
   padding: 0 10px;
   margin-left: -10px;
   /* Adjust to align with fieldset border */
@@ -216,7 +219,7 @@ form label {
 }
 
 .selectable:hover {
-  border-color: #004b99;
+  border-color: var(--main-blue);
   box-shadow: 0 0 0 3px rgba(0, 75, 153, 0.2);
   outline: none;
 }
@@ -254,7 +257,7 @@ form textarea {
 
 /* Submit and Reset Buttons */
 .button {
-  background-color: #004b99;
+  background-color: var(--main-blue);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -319,13 +322,12 @@ input[type="reset"]:hover {
 
 /* homepage Styling */
 
-
 #home,
+#home_image,
+#happy_students,
+#home h3,
 h1 {
   text-align: center;
-  width: 100%;
-  /* This line didn't actually do anything so I've just commented it out temporarily */
-  /* flex: ; */
 }
 
 #home,
@@ -382,14 +384,13 @@ h1 {
 
 #home,
 h3 {
-  text-align: center;
-  color: #004b99;
+  color: var(--main-blue);
   font-weight: bold;
 }
 
 /* Footer Styling */
 #footer {
-  background-color: #004b99;
+  background-color: var(--main-blue);
   /* plain background - eventually want to change */
   color: white;
   /* White text */
@@ -417,9 +418,6 @@ h3 {
 }
 
 #footer nav ul li a {
-  color: #ffffff;
-  ;
-  text-decoration: none;
   font-weight: bold;
   transition: color 0.4s;
 }
