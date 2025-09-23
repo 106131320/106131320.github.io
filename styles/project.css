@@ -176,14 +176,20 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* Space between fieldsets and buttons */
 }
 
 fieldset {
   border: 1px solid var(--main-blue);
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
   background-color: #f8fbfd;
+  /* Make fieldset a flex container */
+  display: flex;
+  flex-direction: column;
+  /* Stack its contents vertically */
+  gap: 15px;
+  /* Space between direct children of the fieldset (labels, inputs, other fieldsets) */
 }
 
 legend {
@@ -192,21 +198,15 @@ legend {
   color: var(--main-blue);
   padding: 0 10px;
   margin-left: -10px;
-  /* Adjust to align with fieldset border */
 }
 
-form p {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
+.applicant-info-fieldset label {
   font-weight: 500;
-  margin-bottom: 8px;
   color: #333;
+  margin-bottom: -5px;
+  /* Pull the label slightly closer to the input */
   display: block;
-  /* Ensure labels are block-level for better spacing */
+  /* Ensure it takes full width for consistency */
 }
 
 .selectable {
@@ -232,27 +232,121 @@ select {
   padding-right: 30px;
 }
 
-/* Radio and Checkbox Styling */
-fieldset legend+label {
-  margin-top: 15px;
+/* Gender Fieldset specific styling */
+.gender-fieldset {
+  flex-direction: row;
+  /* Arrange gender options horizontally */
+  flex-wrap: wrap;
+  /* Allow options to wrap to the next line on smaller screens */
+  gap: 20px;
+  /* Space between individual radio button groups */
+  border: 1px solid #ccc;
+  /* Lighter border for nested fieldset */
+  background-color: #f0f4f7;
+  /* Slightly different background */
+  padding: 15px;
+  margin-top: 5px;
+  /* Adjust spacing from previous input */
+  margin-bottom: 5px;
+  /* Adjust spacing to next input */
 }
 
-fieldset>label {
-  /* General label styling for skill list/gender */
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 10px;
+.gender-fieldset legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-left: -5px;
+  padding: 0 5px;
+}
+
+/* Make each radio button label a flex container for centering */
+.gender-fieldset label {
+  display: flex;
+  align-items: center;
+  /* Vertically align radio button and text */
+  font-weight: normal;
+  /* Reset font weight if inherited */
+  margin-bottom: 0;
+  /* Override any previous label margins */
   cursor: pointer;
 }
 
-form input[type="radio"],
-form input[type="checkbox"] {
+.gender-fieldset input[type="radio"] {
   margin-right: 8px;
+  /* Space between radio button and its label text */
+  flex-shrink: 0;
+  /* Prevent radio button from shrinking */
 }
+
 
 form textarea {
   min-height: 100px;
   resize: vertical;
+}
+
+.skill-group-standard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* margin-bottom: 12px; Handled by parent fieldset gap */
+}
+
+.skill-group-standard label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.skill-group-standard input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Styling for the 'Other Skills' control group */
+.other-skills-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-top: 12px; Handled by parent fieldset gap */
+}
+
+/* Style the label for other-skills specifically */
+.other-skills-control label[for="other-skills"] {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.other-skills-control input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Hide the #hidden div by default */
+#hidden {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.other-skills-control input#other-skills:checked~#hidden {
+  display: block;
+}
+
+/* Additional style for the textarea within #hidden */
+#hidden label {
+  margin-bottom: 8px;
+}
+
+#hidden textarea {
+  width: 100%;
 }
 
 /* Submit and Reset Buttons */
@@ -267,7 +361,6 @@ form textarea {
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 10px;
   align-self: flex-start;
-  /* Align buttons to the start */
 }
 
 .button:hover {
@@ -281,43 +374,6 @@ input[type="reset"] {
 
 input[type="reset"]:hover {
   background-color: #5a6268;
-}
-
-#hidden {
-  display: none;
-}
-
-/* Style for the hidden div when checkbox is checked */
-#other-skills:checked+#hidden {
-  display: block;
-  margin-top: 15px;
-}
-
-/* Specific styling for the hidden textarea label */
-#hidden label {
-  margin-bottom: 8px;
-}
-
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-
-  form p {
-    flex-direction: column;
-  }
-
-  form label {
-    width: 100%;
-  }
-
-  form input[type="submit"],
-  form input[type="reset"] {
-    width: 100%;
-  }
 }
 
 /* homepage Styling */
@@ -426,3 +482,27 @@ h3 {
   color: #cabebe;
   /* temp grey on hover */
 }
+
+
+@media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    form label {
+      width: 100%;
+    }
+
+    form input[type="submit"],
+    form input[type="reset"] {
+      width: 100%;
+    }
+
+    fieldset>input[type="text"],
+    fieldset>input[type="email"],
+    fieldset>select.selectable {
+      width: 100%;
+    }
+  }
