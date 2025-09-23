@@ -255,6 +255,39 @@ form textarea {
   resize: vertical;
 }
 
+.skill-group-standard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-group-standard label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.other-skills-control {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.other-skills-control label[for="other-skills"] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+#hidden {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.other-skills-control input#other-skills:checked~#hidden {
+  display: block;
+}
+
 /* Submit and Reset Buttons */
 .button {
   background-color: var(--main-blue);
@@ -281,43 +314,6 @@ input[type="reset"] {
 
 input[type="reset"]:hover {
   background-color: #5a6268;
-}
-
-#hidden {
-  display: none;
-}
-
-/* Style for the hidden div when checkbox is checked */
-#other-skills:checked+#hidden {
-  display: block;
-  margin-top: 15px;
-}
-
-/* Specific styling for the hidden textarea label */
-#hidden label {
-  margin-bottom: 8px;
-}
-
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-
-  form p {
-    flex-direction: column;
-  }
-
-  form label {
-    width: 100%;
-  }
-
-  form input[type="submit"],
-  form input[type="reset"] {
-    width: 100%;
-  }
 }
 
 /* homepage Styling */
@@ -425,4 +421,26 @@ h3 {
 #footer nav ul li a:hover {
   color: #cabebe;
   /* temp grey on hover */
+}
+
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  form p {
+    flex-direction: column;
+  }
+
+  form label {
+    width: 100%;
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    width: 100%;
+  }
 }

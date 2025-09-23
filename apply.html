@@ -211,47 +211,48 @@
         </p>
         <fieldset>
           <legend>Skill List</legend>
-          <!-- Temporary Skill Names until job positions are discussed as a group -->
-          <!-- Due to each of these needing to be able to display seperately each skill is given a unique name so that it appears in the submission as an additional result this means that these checkboxes do not need to have a value-->
-          <label for="skill1">Skill 1</label>
-          <input
-            type="checkbox"
-            name="skill1"
-            id="skill1">
 
-          <label for="skill2">Skill 2</label>
-          <input
-            type="checkbox"
-            name="skill2"
-            id="skill2">
+          <div class="skill-group-standard">
+            <!-- These are the standard skills (no change here) -->
+            <label for="skill1">
+              <input type="checkbox" name="skill1" id="skill1" />
+              Strong Sense of Obedience
+            </label>
 
-          <label for="skill3">Skill 3</label>
-          <input
-            type="checkbox"
-            name="skill3"
-            id="skill3">
+            <label for="skill2">
+              <input type="checkbox" name="skill2" id="skill2" />
+              General Ignorance
+            </label>
 
-          <label for="skill4">Skill 4</label>
-          <input
-            type="checkbox"
-            name="skill4"
-            id="skill4">
+            <label for="skill3">
+              <input type="checkbox" name="skill3" id="skill3" />
+              Lack Of Social Interaction
+            </label>
 
-          <label for="skill5">Skill 5</label>
-          <input
-            type="checkbox"
-            name="skill5"
-            id="skill5">
+            <label for="skill4">
+              <input type="checkbox" name="skill4" id="skill4" />
+              Cursive
+            </label>
 
-          <label for="other-skills">Other Skills</label>
-          <input
-            type="checkbox"
-            name="other-skills"
-            id="other-skills">
-          <div id="hidden">
-            <label for="other-skills-long">Other Skills</label>
-            <textarea class="selectable" name="other-skills-long" id="other-skills-long"
-              placeholder="Type your other skills here"></textarea>
+            <label for="skill5">
+              <input type="checkbox" name="skill5" id="skill5" />
+              Willingness to sign any document
+            </label>
+          </div>
+
+          <div class="other-skills-control">
+            <!-- Make the input and #hidden direct siblings -->
+            <input type="checkbox" name="other-skills" id="other-skills" />
+            <label for="other-skills">Other Skills</label>
+            <!-- #hidden is now a sibling of the input and label -->
+            <div id="hidden">
+              <label for="other-skills-long">What are your other skills?</label>
+              <textarea
+                class="selectable"
+                name="other-skills-long"
+                id="other-skills-long"
+                placeholder="Type your other skills here"></textarea>
+            </div>
           </div>
         </fieldset>
       </fieldset>
