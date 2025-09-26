@@ -500,6 +500,10 @@ h3 {
   background-color: #ffffff9c;
 }
 
+#text {
+  margin-bottom: -51px;
+}
+
 .home,
 br {
   line-height: 2;
@@ -552,6 +556,7 @@ br {
   /* This allows for the entire div to be hidden at once extracting this color. */
   color: #000000;
 }
+
 
 #revealed {
   opacity: 0;
