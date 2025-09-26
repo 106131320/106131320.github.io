@@ -566,6 +566,57 @@ br {
   }
 }
 
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  color: #004b99;
+}
+
+.team-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+dl dt {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #004b99;
+}
+
+dl dd ul {
+  margin: 6px 0 14px 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table caption {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #004b99;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+}
 
 
 #revealed a,
