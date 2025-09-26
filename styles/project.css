@@ -24,7 +24,7 @@ body {
   background: #eef2f7;
   color: #333;
   line-height: 1.6;
-    /* max-width: 960px; */
+  /* max-width: 960px; */
   max-width: 90%;
   margin: 20px auto;
   padding: 15px;
@@ -477,7 +477,7 @@ h3 {
 }
 
 .home,
-figcaption {
+#caption {
   text-align: center;
   font-size: 20px;
 }
@@ -496,6 +496,10 @@ figcaption {
   object-fit: fill;
 }
 
+#text div {
+  background-color: #ffffff9c;
+}
+
 .home,
 br {
   line-height: 2;
@@ -503,9 +507,8 @@ br {
 
 .centered_top {
   /* centers text, want to change color to something more readable*/
-
   position: absolute;
-  top: 85%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%);
   color: #004b99;
@@ -524,12 +527,13 @@ br {
 
 .centered_bottom {
   position: absolute;
-  top: 100%;
-  left: 52%;
+  top: 88.8%;
+  left: 50%;
   transform: translate(-50%);
   color: #004b99;
   font-size: 50px;
   font-weight: bold;
+  margin-top: 120px;
   text-shadow:
     -2px -2px 0 #000,
     2px -2px 0 #000,
@@ -543,7 +547,8 @@ br {
 }
 
 
-#revealed a {
+#revealed a,
+#revealed p {
   /* This allows for the entire div to be hidden at once extracting this color. */
   color: #000000;
 }
