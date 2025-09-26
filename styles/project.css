@@ -461,13 +461,17 @@ input[type="reset"]:hover {
   font-weight: bold;
 }
 
+p#donate_p {
+  text-align: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: -5%;
+}
 
 #donate_button {
   position: relative;
-  bottom: px;
-  left: 500px;
   width: 300px;
-  bottom: 70px;
+
 }
 
 .home,
