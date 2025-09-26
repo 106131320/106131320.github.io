@@ -270,7 +270,6 @@ select {
 
 
 form textarea {
-  min-height: 100px;
   resize: vertical;
 }
 
@@ -278,6 +277,7 @@ form textarea {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: -12px;
 }
 
 .skill-group-standard label {
@@ -300,6 +300,7 @@ form textarea {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 12px;
+  margin-bottom: 15px;
 }
 
 /* Style the label for other-skills specifically */
@@ -307,7 +308,9 @@ form textarea {
   font-weight: 500;
   color: #333;
   cursor: pointer;
-  margin-bottom: 0;
+  margin-top: -3px;
+  margin-left: 4px;
+  margin-right: 10px;
 
 }
 
@@ -321,29 +324,24 @@ form textarea {
 #hidden {
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
   transition:
     max-height 0.5s ease-out,
     opacity 0.5s ease-out,
     padding 0.5s ease-out;
-  padding: 0;
   width: 100%;
 }
 
 .other-skills-control input#other-skills:checked~#hidden {
   max-height: 200px;
   opacity: 1;
-  padding: 10px;
 }
 
-#hidden label {
-  margin-bottom: 8px;
-  display: block;
+.button {
+  margin-top: 20px;
 }
 
 #hidden textarea {
   width: 100%;
-  margin-top: 0;
 }
 
 /* Submit and Reset Buttons */
